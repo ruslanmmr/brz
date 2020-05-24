@@ -1109,6 +1109,7 @@ b, strong {
       opacity: 1; }
 
 .background {
+  background-color: rgba(0, 0, 0, 0.1);
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;

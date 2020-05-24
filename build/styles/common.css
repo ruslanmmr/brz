@@ -1109,7 +1109,7 @@ b, strong {
       opacity: 1; }
 
 .background {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #E9E9E9;
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
@@ -1157,7 +1157,7 @@ b, strong {
      object-position: center; }
 
 .lazy-map {
-  background: rgba(0, 0, 0, 0.1);
+  background: #E9E9E9;
   position: relative; }
   .lazy-map__loader {
     position: absolute;
@@ -2199,12 +2199,13 @@ b, strong {
       right: 20px;
       top: 50%;
       transform: translateY(-50%);
-      display: block;
+      display: flex;
       overflow: hidden;
       width: 60px;
       height: 60px;
       padding: 20px; }
       .popup-block__close .icon {
+        margin: auto;
         width: 100%;
         height: 100%;
         fill: #fff;

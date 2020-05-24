@@ -15,7 +15,7 @@
   }
 }
 .background {
-  background-color: rgba(0 ,0 ,0, 0.1);
+  background-color: $colorD;
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
@@ -66,7 +66,7 @@
   }
 }
 .lazy-map {
-  background: rgba(0,0,0,0.1);
+  background: $colorD;
   position: relative;
   &__loader {
     position: absolute;

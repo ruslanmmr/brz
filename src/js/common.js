@@ -8,7 +8,6 @@ $(document).ready(function(){
   lazy();
   popups();
   nav();
-  checkboxes.init();
 })
 
 

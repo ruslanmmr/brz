@@ -1,0 +1,94 @@
+/* ========== normalize ========== */
+@import "../../node_modules/normalize.css/normalize";
+
+/* ========== fonts ========== */
+@import "./components/fonts";
+
+
+$trs1: .25s ease-in-out;
+$trs2: .5s ease-in-out;
+$trs3: 1s ease-in-out;
+$trs2out: .5s ease-out;
+
+$colorA: #c90000; 
+$colorB: #22253A;
+$colorC: #D3D3D8;
+$colorD: #E9E9E9;
+$colorE: #FAFAFA;
+$colorF: #898989;
+$colorG: #C4C4C4;
+$shadow1: 0px 0px 28px $colorA;
+$shadow2: 0px 20px 50px rgba(0, 0, 0, 0.1);
+
+
+/*========== Basic ==========*/
+html {
+  font-size: 18px;
+  line-height: 1.3;
+}
+body {
+  position: relative;
+  min-width: 320px;
+  font-family: 'PT Sans', sans-serif;
+  color: $colorB;
+}
+* {
+  box-sizing: border-box;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+a, button, label, input, textarea, select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  display: block;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  appearance: none;
+  padding: 0;
+  border-radius: 0;
+  transition: $trs1;
+}
+a, button, label {
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width:479px) {
+  html {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/*========== Grid ==========*/
+@import "./components/grid";
+
+/*========== Layout ==========*/
+@import "./components/layout";
+
+/*========== Typography ==========*/
+@import "./components/typography";
+
+/*========== Helpers ==========*/
+@import 'components/helpers';
+
+/*========== Buttons ==========*/
+@import 'components/buttons';
+
+/*========== Blocks ==========*/
+@import 'components/blocks';
+
+/*========== Header ==========*/
+@import 'components/header';
+
+/*========== Footer ==========*/
+@import 'components/footer';
+
+/*========== Form ==========*/
+@import 'components/form';
+
+/*========== Popup ==========*/
+@import 'components/popup';

@@ -1,0 +1,38 @@
+.popup#modal(data-scroll-lock-scrollable)
+  .popup-block
+    .popup-block__head
+      h2.popup-block__title.text-subtitle Рассчет стоимости
+      a(href="javascript:void(0);").popup-block__close.js-popup-close
+        svg.icon
+          use(xlink:href='img/svg/sprite.svg#+')
+    .popup-block__content
+      form(action="#").popup-form
+        .popup-form__group
+          span.popup-form__group-label.text-acsent-bold Марка бетона
+          .select
+            select
+              option М100
+              option М150
+        .popup-form__group
+          span.popup-form__group-label.text-acsent-bold Влагостокость бетона
+          .select
+            select
+              option B10
+              option B20
+        .popup-form__group
+          span.popup-form__group-label.text-acsent-bold Необходимый объем
+          .select
+            select
+              option 30
+              option 50
+        .popup-form__group
+          span.popup-form__group-label.text-acsent-bold Населенный пункт
+          .select
+            select
+              option Новоселки
+              option Населенный пункт
+        .popup-form__inputs
+          input(type="text" placeholder="Ваше имя").input.input_style-2
+          input(type="text" placeholder="Телефон или e-mail").input.input_style-2
+        .popup-form__button
+          button.button.button_style-1 Запросить коммерческое предложение

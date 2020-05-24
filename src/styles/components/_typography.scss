@@ -1,0 +1,100 @@
+h1,h2,h3,h4,h5,h6 {
+  margin: 2.5rem 0 1rem 0;
+  line-height: 1.25;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+h1, h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1.125rem;
+}
+p {
+  margin: 0 0 1rem 0;
+  &:last-child {
+    margin: 0;
+  }
+}
+b, strong {
+  font-weight: 700;
+}
+
+.text-title {
+  font-weight: bold;
+  font-size: 87px;
+  line-height: 95%;
+  letter-spacing: 0.015em;
+}
+.text-subtitle {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 105%;
+  letter-spacing: 0.02em;
+}
+.text-mobilez {
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 108.42%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.text-acsent-bold {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 108.42%;
+  letter-spacing: 0.02em;
+}
+.text-title-request {
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width:999px) {
+  .text-title {
+    font-size: 77px;
+  }
+  .text-subtitle {
+    font-size: 40px;
+  }
+  .text-mobilez {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width:767px) {
+  .text-title {
+    font-size: 40px;
+  }
+  .text-subtitle {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width:479px) {
+  .text-title {
+    font-size: 37px;
+  }
+  .text-mobilez {
+    font-size: 17px;
+  }
+  .text-subtitle {
+    font-size: 27px;
+  }
+  .text-title-request {
+    font-size: 30px;
+  }
+}

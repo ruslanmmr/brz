@@ -1,0 +1,178 @@
+extends layout/layout
+block title
+  title Завод
+block content
+  section.section.home
+    .container.container_type-3
+      .home__top
+        h2.home__sub-title.text-mobilez Мобильный бетонный завод
+        h1.home__title.text-title Доставка<br> бетона 
+        span.home__distance до 
+          strong 250км
+        .image.home__car
+          img.lazy(data-src="img/Foto.png", alt="car")
+    .container.container_type-2
+      .home__bottom
+        .advantages-small-item
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#icon5')
+          strong.advantages-small-item__text Любое время<br> Любое место
+        .advantages-small-item
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#icon4')
+          strong.advantages-small-item__text Доставка по Меллекесскому, Кошкинскому району, в республику Татарстан, Самарскую, Ульяновскую области и по всему Среднему Поволжью
+    .container
+      include blocks/request
+  section.section.product
+    .container
+      .product__container
+        .product-head
+          h2.product__title.text-subtitle Бетон который<br> мы можем произвести на Вашем объекте
+          a(href="#modal").js-popup-open.button.button_style-3 рассчитать стоимость
+        .product-block
+          h3.product-block__title.text-acsent-bold Бетон легкий
+          .product-block__head
+            span.product-block__head-label Заполнитель
+            strong.product-block__head-text Керамзитовый гравий<br> фр.10/20
+          ul.product-block__list
+            li.product-block__item 
+              strong В7.5 (М100)
+            li.product-block__item
+              strong В10/В15 (М150/200)
+        .product-block
+          h3.product-block__title.text-acsent-bold Бетон тяжелый
+          .product-block__head
+            span.product-block__head-label Заполнитель
+            strong.product-block__head-text Щебень известняковый щебень гранитный
+          ul.product-block__list
+            li.product-block__item 
+              strong В7.5/10 (М100/150)
+            li.product-block__item 
+              strong В12.5/В15 (М150/200)
+            li.product-block__item 
+              strong В20/22.5 (М250/300)
+            li.product-block__item 
+              strong В22.5/В25 (М300/400)      
+    .container.container_type-3
+      .product-post-message
+        svg.icon
+          use(xlink:href='img/svg/sprite.svg#icon1')
+        strong.product-post-message__text Наш мобильный бетонный завод может производить любые виды бетона в соответсвии с проектной маркой. Качетво гарантируется лабораторными испытаниями и подтверждается паспортом соответсвия.
+  section.section.coverage-area
+    .container
+      .coverage-area__container
+        .coverage-area__head
+          h2.coverage-area__title.text-subtitle Наша зона охвата
+          span.coverage-area__line
+          .coverage-area__head-text
+            span.coverage-area__text.text-acsent-bold Нету бетона рядом? 
+            span.coverage-area__text.text-acsent-bold Мы доставим его вам!
+        .lazy-map
+          img.lazy-map__loader(src="img/svg/loader.svg", alt="loader")
+          iframe.lazy.lazy-map__map(data-src='https://yandex.ua/map-widget/v1/?um=constructor%3Ad26d0d26a54bc961aed7a4dee6035efea83e3225a2eac485ed3a4b378fe88eb6&source=constructor')
+        include blocks/request
+  section.section.section_after-request.work
+    .background.cover.lazy(data-src='img/fon.jpg')
+    .container.container_type-3
+      .section__head
+        h2.work__title.text-subtitle Этапы работы
+      .work__container
+        .work-item
+          .work-item__container
+            .work-item__head
+              h6.work-item__title.text-acsent-bold Заявка
+              svg.icon
+                use(xlink:href='img/svg/sprite.svg#1')
+            .work-item__content 
+              p Оставьте заявку любым удобным способом по телефону, e-mail или просто заполните форму на сайте
+        .work-item
+          .work-item__container
+            .work-item__head
+              h6.work-item__title.text-acsent-bold Просчет
+              svg.icon
+                use(xlink:href='img/svg/sprite.svg#2')
+            .work-item__content 
+              p Расчет производится в зависимости от географического положения объекта застройки с выбором оптимальной цены
+        .work-item
+          .work-item__container
+            .work-item__head
+              h6.work-item__title.text-acsent-bold Оплата
+              svg.icon
+                use(xlink:href='img/svg/sprite.svg#3')
+            .work-item__content 
+              p Принимаются все виды расчета удобные для Вас
+        .work-item
+          .work-item__container
+            .work-item__head
+              h6.work-item__title.text-acsent-bold Подготовка
+              svg.icon
+                use(xlink:href='img/svg/sprite.svg#4')
+            .work-item__content 
+              p После договорённости, группа специалистов осматривает объект и решает организационные вопросы
+        .work-item 
+          .work-item__container
+            .work-item__head
+              h6.work-item__title.text-acsent-bold Производсто у Вас на глазах
+              svg.icon
+                use(xlink:href='img/svg/sprite.svg#5')
+            .work-item__content 
+              p Производство осуществляется непосредственно на объекте, что позволяет Вам контролировать объем, скорость и качество. Компьютер обеспечивает зависимотсь всех компонентов для получения определенной марки бетона в соответсвии с ГОСТ
+  section.section.applying
+    .container
+      .section__head
+        h2.applying__title.text-subtitle Наш бетон подойдет вам при строительстве:
+    .container.container_type-3
+      .applying__container
+        //block
+        .applying-block
+          .applying-block__container.js-hover-element
+            .background.cover.lazy(data-src='img/b5eb79e3c517c87289055ae8f3943a04.jpeg')
+            h6.applying-block__title.text-acsent-bold Подготовительного<br> бетона
+        //block
+        .applying-block
+          .applying-block__container.js-hover-element
+            .background.cover.lazy(data-src='img/b3abf80c487144795f63663112e04eb9.jpeg')
+            h6.applying-block__title.text-acsent-bold Фундаментa<br>
+              span (малоэтажных строений)
+        //block
+        .applying-block
+          .applying-block__container.js-hover-element
+            .background.cover.lazy(data-src='img/f7643bac6a41082307ec71610b3616ab.jpeg')
+            h6.applying-block__title.text-acsent-bold Пола, стен, перекрытий,<br> колонн
+        //block
+        .applying-block
+          .applying-block__container.js-hover-element
+            .background.cover.lazy(data-src='img/298f94b604164225e0041c0bc99cebd7.jpeg')
+            h6.applying-block__title.text-acsent-bold Теплоизоляций<br>
+              span (Конструкионно-теплоизоляционных стен)
+    .container
+      include blocks/request
+  section.section.section_after-request.advantages
+    .background.cover.lazy(data-src='img/28477a5e5855d0864a57e4e7bf1d0e9e.jpeg')
+    .container
+      .advantages__head.section__head
+        h2.advantages__title.text-subtitle Попробуйте<br> 
+          span БОЛЕЕ технологичное<br> 
+          | производство бетона
+      .advantages__container
+        //item
+        .advantages-item
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#icon3')
+          .advantages-item__content 
+            h6.advantages-item__title.text-acsent-bold Компютерный контроль качества
+            p.advantages-item__text Благодаря высокоточной электронике, обеспечивается точное дозирование всех материалов и состава смеси.
+        //item
+        .advantages-item
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#icon2')
+          .advantages-item__content 
+            h6.advantages-item__title.text-acsent-bold Производство бетонна прямо на площадке
+            p.advantages-item__text Использование позволяет сократить расходы, повысить прочность, усилить контроль времени и улучшить гибкость работы с высококачественным бетоном.
+        //item
+        .advantages-item
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#icon6')
+          .advantages-item__content 
+            h6.advantages-item__title.text-acsent-bold Не переплачивайте за любую марку бетона 
+            p.advantages-item__text Оптимизация логистики от места стационарного бетонного завода до потребителя, позволяет изготовить до 700 м3/сутки бетона заданной марки при минимальном использовании автобетоносмесителей

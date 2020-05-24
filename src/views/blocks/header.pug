@@ -1,0 +1,39 @@
+header.header
+  .container
+    .header__containter
+      .header__top
+        a(href="#").logo
+          h2.logo__title ДБРЗ
+          p.logo__slogan Димитровградский бетонно-растворный завод
+        .header-adress
+          ul.header-adress__list
+            li.header-adress__item
+              span.header-adress__label Отдел продаж
+              a(href="tel:+79278234358").header-adress__link +7-927-823-4358
+            li.header-adress__item
+              span.header-adress__label E-mail
+              a(href="mailto:d-brz@yandex.ru").header-adress__link d-brz@yandex.ru
+      .header__mobile-container
+        a(href="#").nav-toggle.button.button_style-2 Навигация по сайту
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#menu')
+          svg.icon
+            use(xlink:href='img/svg/sprite.svg#close')
+        a(href="#").button.button_style-2 Мобильный завод
+      nav.header-nav
+        ul.header-nav__list
+          li.header-nav__item
+            a(href="#").header-nav__link.active Главная
+          li.header-nav__item
+            a(href="#").header-nav__link Каталог продукции
+          li.header-nav__item
+            a(href="#").header-nav__link Доставка
+          li.header-nav__item
+            a(href="#").header-nav__link Лаборатория
+          li.header-nav__item
+            a(href="#").header-nav__link Заявка
+          li.header-nav__item
+            a(href="#").header-nav__link Контакты
+          li.header-nav__item.header-nav__item_mobile-z
+            a(href="#").button.button_style-1.active Мобильный завод
+        

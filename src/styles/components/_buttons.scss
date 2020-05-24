@@ -1,0 +1,73 @@
+.button {
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  &_style-1 {
+    white-space: nowrap;
+    color: #fff;
+    padding: 13px 10px;
+    background-color: $colorA;
+    border: 1px solid $colorA;
+    &.small {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+    &.hover {
+      background-color: transparent;
+      color: $colorA;
+    }
+    &.active {
+      background-color: transparent;
+      color: $colorA;
+      &.hover {
+        background-color: $colorA;
+        color: #fff;
+      }
+    }
+  }
+  &_style-2 {
+    text-transform: uppercase;
+    border: 1px solid $colorA;
+    background-color: $colorA;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    &.hover {
+      background-color: transparent;
+      color: $colorA;
+    }
+    &.active {
+      background-color: transparent;
+      color: $colorA;
+      &.hover {
+        background-color: $colorA;
+        color: #fff;
+      }
+    }
+  }
+  &_style-3 {
+    background-color: $colorA;
+    box-shadow: $shadow1;
+    border: 1px solid $colorA;
+    padding: 16px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: normal;
+    &.hover {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .button {
+    &_style-3,
+    &_style-1 {
+      padding: 10px 15px;
+    }
+  }
+}

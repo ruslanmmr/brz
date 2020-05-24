@@ -45,31 +45,6 @@ function hoverEvents() {
   })
 }
 
-//checkboxes
-window.checkboxes = {
-  init: function() {
-    checkboxes.check();
-    $(document).on('click', '.checkbox, .radio', function() {
-      checkboxes.check();
-    })
-  },
-  check: function() {
-    $('.checkbox, .radio').each(function() {
-      let input = $(this).find('input');
-      if(input.prop('disabled')) {
-        $(this).addClass('disabled');
-      } else {
-        $(this).removeClass('disabled');
-      }
-      if(input.prop('checked')) {
-        $(this).addClass('checked');
-      } else {
-        $(this).removeClass('checked');
-      }
-    })
-  }
-}
-
 //popups
 function popups() {
   let $open = $('.js-popup-open'),

@@ -69,7 +69,8 @@ block content
             span.coverage-area__text.text-acsent-bold Мы доставим его вам!
         .lazy-map
           img.lazy-map__loader(src="img/svg/loader.svg", alt="loader")
-          iframe.lazy.lazy-map__map(data-src='https://yandex.ua/map-widget/v1/?um=constructor%3Ad26d0d26a54bc961aed7a4dee6035efea83e3225a2eac485ed3a4b378fe88eb6&source=constructor')
+          .lazy-map__map#map
+          //iframe.lazy.lazy-map__map(data-src='https://yandex.ua/map-widget/v1/?um=constructor%3Ad26d0d26a54bc961aed7a4dee6035efea83e3225a2eac485ed3a4b378fe88eb6&source=constructor')
         include blocks/request
   section.section.section_after-request.work
     .background.cover.lazy(data-src='img/fon.jpg')

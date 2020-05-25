@@ -128,7 +128,8 @@
                 <div class="coverage-area__head-text"><span class="coverage-area__text text-acsent-bold">Нету бетона рядом? </span><span class="coverage-area__text text-acsent-bold">Мы доставим его вам!</span></div>
               </div>
               <div class="lazy-map"><img class="lazy-map__loader" src="img/svg/loader.svg" alt="loader">
-                <iframe class="lazy lazy-map__map" data-src="https://yandex.ua/map-widget/v1/?um=constructor%3Ad26d0d26a54bc961aed7a4dee6035efea83e3225a2eac485ed3a4b378fe88eb6&amp;source=constructor"></iframe>
+                <div class="lazy-map__map" id="map"></div>
+                <!--iframe.lazy.lazy-map__map(data-src='https://yandex.ua/map-widget/v1/?um=constructor%3Ad26d0d26a54bc961aed7a4dee6035efea83e3225a2eac485ed3a4b378fe88eb6&source=constructor')-->
               </div>
               <div class="request-block">
                 <h6 class="request-block__title text-title-request">Оставить заявку</h6><span class="request-block__text">Наш менеджер свяжется с вами<br> и уточнит детали заказа</span>
@@ -411,5 +412,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--scripts-->
     <script src="js/common.min.js"></script>
+    <!--map-->
+    <script>
+      let initialized,
+      $map = document.querySelector('#map'),
+      script = document.createElement('script');
+      script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=7f1ec29a-8f7b-4f2a-b1bb-56068179065f';
+      checkMap();
+      window.addEventListener('scroll', function(event){
+      checkMap();
+      })
+      function checkMap() {
+      let top = $map.getBoundingClientRect().top - document.documentElement.clientHeight,
+      bottom = $map.getBoundingClientRect().bottom;
+      if(top<0 && bottom>0 && !initialized) {
+      initialized = true;
+      document.body.prepend(script);
+      script.onload = function() {
+      ymaps.ready(function() {
+      //показываем карту после загрузки
+      $map.classList.add('loaded');
+      //координаты офиса
+      let c = [54.222548, 49.564160];
+      //инициализация карты
+      let map = new ymaps.Map($map, {
+      center: c,
+      zoom: 6
+      });
+      //метка на карте
+      map.geoObjects.add(new ymaps.Placemark(c, {
+      balloonContent: 'г. Димитровград, Мулловское шоссе, 49а'
+      },{
+      preset: 'islands#icon',
+      iconColor: '#c90000'
+      }))
+      // Добавляем круг на карту.
+      map.geoObjects.add(new ymaps.Circle([
+      c,
+      // Радиус круга в метрах, 200км
+      200000
+      ],{
+      balloonContent: "Радиус доставки бетона - 200км"
+      }, {
+      //цвет заливки
+      fillColor: '#c9000050',
+      strokeColor: '#c9000050'
+      }));
+      })
+      }
+      }
+      }
+    </script>
   </body>
 </html>

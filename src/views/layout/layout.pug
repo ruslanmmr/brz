@@ -23,50 +23,52 @@ html
     //map
     script.
       let initialized,
-      $map = document.querySelector('#map'),
-      script = document.createElement('script');
+          $map = document.querySelector('#map'),
+          script = document.createElement('script');
       script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=7f1ec29a-8f7b-4f2a-b1bb-56068179065f';
+
       checkMap();
       window.addEventListener('scroll', function(event){
-      checkMap();
+        checkMap();
       })
+
       function checkMap() {
-      let top = $map.getBoundingClientRect().top - document.documentElement.clientHeight,
-      bottom = $map.getBoundingClientRect().bottom;
-      if(top<0 && bottom>0 && !initialized) {
-      initialized = true;
-      document.body.prepend(script);
-      script.onload = function() {
-      ymaps.ready(function() {
-      //показываем карту после загрузки
-      $map.classList.add('loaded');
-      //координаты офиса
-      let c = [54.222548, 49.564160];
-      //инициализация карты
-      let map = new ymaps.Map($map, {
-      center: c,
-      zoom: 6
-      });
-      //метка на карте
-      map.geoObjects.add(new ymaps.Placemark(c, {
-      balloonContent: 'г. Димитровград, Мулловское шоссе, 49а'
-      },{
-      preset: 'islands#icon',
-      iconColor: '#c90000'
-      }))
-      // Добавляем круг на карту.
-      map.geoObjects.add(new ymaps.Circle([
-      c,
-      // Радиус круга в метрах, 200км
-      200000
-      ],{
-      balloonContent: "Радиус доставки бетона - 200км"
-      }, {
-      //цвет заливки
-      fillColor: '#c9000050',
-      strokeColor: '#c9000050'
-      }));
-      })
-      }
-      }
+        let top = $map.getBoundingClientRect().top - document.documentElement.clientHeight,
+            bottom = $map.getBoundingClientRect().bottom;
+        if(top<0 && bottom>0 && !initialized) {
+          initialized = true;
+          document.body.prepend(script);
+          script.onload = function() {
+            ymaps.ready(function() {
+              //показываем карту после загрузки
+              $map.classList.add('loaded');
+              //координаты офиса
+              let c = [54.222548, 49.564160];
+              //инициализация карты
+              let map = new ymaps.Map($map, {
+                center: c,
+                zoom: 6
+              });
+              //метка на карте
+              map.geoObjects.add(new ymaps.Placemark(c, {
+                balloonContent: 'г. Димитровград, Мулловское шоссе, 49а'
+              },{
+                preset: 'islands#icon',
+                iconColor: '#c90000'
+              }))
+              // Добавляем круг на карту.
+              map.geoObjects.add(new ymaps.Circle([
+                c,
+                // Радиус круга в метрах, 200км
+                200000
+              ],{
+                balloonContent: "Радиус доставки бетона - 200км"
+              }, {
+                //цвет заливки
+                fillColor: '#c9000050',
+                strokeColor: '#c9000050'
+              }));
+            })
+          }
+        } 
       }
